@@ -1,7 +1,11 @@
-<script>
-  for(var i=0; i<63; i++)
+  <script>
+  for(var i=0; i<=32; i++)
     {
-      var n = 1070 + i;
-      document.write('&#' + n + ';');
+      var n = 1072 + i;
+      var bold = (i % 2 == 0)
+      if(bold)document.write('<b>');
+      document.write('&#' + n + '; &amp;#' + n + ';');
+      if(bold)document.write('</b>');
     }
 </script>
+ 
