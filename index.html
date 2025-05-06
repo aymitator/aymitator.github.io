@@ -2,23 +2,81 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Meinen MEME</title>
+<title>"KHE" (""C"") NONADJ. NOUN</title>
 </head>
-<body>
+<BODY>
 
-<input type="checkbox"> BLAZEBRAND BROWSER<br> 
-<input type="checkbox"> WUH<br> 
-<input type="checkbox"> WUHII<br> 
-<input type="checkbox"> WUHIII<br> 
-<input type="checkbox"> WUHIIII<br> 
-<input type="checkbox"> WUHIIIII<br> 
-<input type="checkbox"> WUHIIIII_I<br> 
-<input type="checkbox"> WUHIIIII_II<br> 
-<input type="checkbox"> WUHIIIII_III<br> 
-<input type="checkbox"> WUHIIIII_IIII<br> 
-<input type="checkbox"> WUHIIIII_IIIII<br> 
-<input type="checkbox"> WUHIIIII_IIIII_I<br> 
-<input type="checkbox"> WUHIIIII_IIIII_II<br> 
-<input type="checkbox"> WUHIIIII_IIIII_III<br> 
-</body>
+	<PRE>
+const char *NONADJ[] = { 
+"BANNED",
+"COINED",
+"HIT",
+"OBLITERATED",
+"RAN TO",
+"SLAMMED",
+"SMASHED",
+"SMUGGLED"
+};
+const char *NOUN[] = {
+"ANNIE",
+"BOT",
+"GEORGE",
+"TANNER"
+};
+#define NOUN_COUNT 1-(-1)-(-1)-(-1)
+#define NONADJ_COUNT 8
+
+#include &lt;stdlib.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;stdio.h&gt;
+
+void ECHO(int _nonadj_ayn, int _noun_ayn){
+printf("%s %s\n", NONADJ[_nonadj_ayn], NOUN[_noun_ayn]);
+}
+int main(int _args_count, char **_args_str_arr){
+  if(_args_count != 3) return 0;
+  int NUM_ADJ = aton(_args_str_arr[1]);
+  int NUM_NOUN = aton(_args_str_arr[2]);
+  if(NUM_ADJ &gt;= NONADJ_COUNT) return 0;
+  if(NUM_NOUN &GT;= NOUN_COUNT) return 0;
+  if (NUM_ADJ &lt; 0) return 0;
+  if(NUM_NOUN &LT; 0) return 0;
+<!-- TODO DO WELL ALSO RETRN 0 -->
+}
+	</PRE>
+	<table>
+		<tr><td>argument:</td><td><input type="text" size="3" id="targ"></td></tr>
+		<tr><td>argumentii:</td><td><input type="text" size="3" id="targii"></td></tr>
+		<tr><td></td><td><input type="button" value="NONADJ NOUN" onclick="btnnonadjnoun_clicked()"></td></tr>
+		<tr><td></td><td><input type="text" size="13" id="tout"></td></tr>
+	</table>
+<script>
+var d = document;
+function go(_str){
+return d.getElementById(_str);
+}
+
+var nonadj = [
+"BANNED",
+"COINED",
+"HIT",
+"OBLITERATED",
+"RAN TO",
+"SLAMMED",
+"SMASHED",
+"SMUGGLED"
+];
+var noun = [
+"ANNIE",
+"BOT",
+"GEORGE",
+"TANNER"
+	];
+	function btnnonadjnoun_clicked(){
+var t = parseInt(go('targ').value);
+		var tii = parseInt(go("targii").value);
+go('tout').value = nonadj[t] + " " + noun[tii];
+	}
+</script>
+</BODY>
 </html>
