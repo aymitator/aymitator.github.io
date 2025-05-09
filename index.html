@@ -6,9 +6,6 @@
 <title>"KHE" (""C"") NONADJ. NOUN</title>
 </head>
 <BODY>
-	LANGUAGE A' CURRENT ADD 10000 SECONDS IS <BR><CODE>&LT;?hhh tttunction ECHO2($_STR){ echo $_STR . "\n\n"; } <BR>$AR = array(1,2,3); tttoreach ($AR as $ELE){ ECHO2('TISS LANGUAGE'); } <BR>
-reneed_once('autotttamily.hhh'); reneed_once('selltttamily.hhh'); <BR>
-$TTTAM = TTTAMILY_TTTACTORY::GEN_ALL(); /* <CODE STYLE="BACKGROUND-COLOR:yellow">TODO</CODE> */ ?&gt;</CODE> 
 	<PRE>
 const char *NONADJ[] = { 
 "BANNED",
@@ -44,14 +41,14 @@ int main(int _args_count, char **_args_str_arr){
   if(NUM_NOUN &GT;= NOUN_COUNT) return 0;
   if (NUM_ADJ &lt; 0) return 0;
   if(NUM_NOUN &LT; 0) return 0;
-<!-- TODO DO WELL ALSO RETRN 0 -->
+&lt;!-- TODO DO WELL ALSO RETRN 0 --&gt;
 }
 	</PRE>
 	<table>
-		<tr><td>argument:</td><td><input type="text" size="3" id="targ"></td></tr>
-		<tr><td>argumentii:</td><td><input type="text" size="3" id="targii"></td></tr>
+		<tr><td>argument:</td><td><input type="text" size="3" id="targ" placeholder="0"></td></tr>
+		<tr><td>argumentii:</td><td><input type="text" size="3" id="targii" placeholder="0"></td></tr>
 		<tr><td></td><td><input type="button" value="NONADJ NOUN" onclick="btnnonadjnoun_clicked()"></td></tr>
-		<tr><td></td><td><input type="text" size="13" id="tout"></td></tr>
+		<tr><td></td><td><input type="text" size="16" id="tout"></td></tr>
 	</table>
 <script>
 var d = document;
@@ -76,7 +73,7 @@ var noun = [
 "TANNER"
 	];
 	function btnnonadjnoun_clicked(){
-var t = parseInt(go('targ').value);
+var t = parseInt(go('targ').value );
 		var tii = parseInt(go("targii").value);
 go('tout').value = nonadj[t] + " " + noun[tii];
 	}
