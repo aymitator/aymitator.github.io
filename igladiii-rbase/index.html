@@ -3,14 +3,17 @@
 
 <body><h1>iGladiii R-Base</h1>
   <a href="test.html">./test.html</a><br>
-<textarea rows="6" style="width:90%" id="txt">10 alert("HELLO WORLD");</textarea><hr>
+<textarea rows="6" style="width:90%" id="txt" onkeydown="if(event.keyCode==116){btnrun_clicked();}">10 alert("HELLO WORLD");</textarea><hr>
 <input type="button" value="Run" onclick="btnrun_clicked()">
+  <br>
+  <div id="sz" style="white-space:pre-line"></div>
 
 <SCRIPT>
   var d = document;
   function go(_str){ return d.getElementById(_str); }
 function btnrun_clicked(){
 //eval(go("txt").innerHTML);
+  go("sz").innerHTML = go("txt").innerHTML;
   alert(go("txt").innerHTML);
 }
 </SCRIPT></body></html>
