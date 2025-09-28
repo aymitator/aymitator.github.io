@@ -3,7 +3,8 @@
 
 <body><h1>iGladiii R-Base</h1>
   <a href="test.html">./test.html</a><br>
-<textarea rows="6" style="width:90%" id="txt" onkeydown="if(event.keyCode==116){btnrun_clicked();return false;}">10 alert("HELLO WORLD");</textarea><br>
+  <input type="button" value="uc" onclick="btnuc_clicked();" /><br>
+<textarea rows="8" style="width:90%;font-size:16pt" id="txt" onkeydown="if(event.keyCode==116){btnrun_clicked();return false;}">10 alert("HELLO WORLD");</textarea><br>
 <input type="button" value="Run" onclick="btnrun_clicked()">
   <hr><div>stdayn: <input type="text" style="width:82%"></div>
   <div>stdout: <input type="text" style="width:82%"></div>
@@ -12,6 +13,9 @@
 <SCRIPT>
   var d = document;
   function go(_str){ return d.getElementById(_str); }
+  function btnuc_clicked(){
+go("txt").value = go("txt").value.toLowerCase();
+  }
 function btnrun_clicked(){
 //eval(go("txt").innerHTML);
   go("sz").innerHTML = go("txt").value;
