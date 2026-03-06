@@ -2,6 +2,21 @@
 <html lang="en">
 <head><meta charset="utf-8">
 <title>snek lang unleashed</title>
+  <script>
+  var d = document;
+  function go1(){
+return d.getElementsByTagName("pre")[0];
+  }
+  function goii(){
+return d.getElementsByTagName("pre")[1];
+  }
+  function translate(){
+var myayn = go1().innerHTML;
+var myout = goii();
+myout.innerHTML = myayn.replaceAll("ayt ", "if ");
+    
+  }
+</script>
 </head>
 
   <body>
@@ -18,21 +33,7 @@ regular("empty.txt", "w")
 <input type="button"
   value="translate"
   onclick="translate()" />
-<script>
-  var d = document;
-  function go1(){
-return d.getElementsByTagName("pre")[0];
-  }
-  function goii(){
-return d.getElementsByTagName("pre")[1];
-  }
-  function translate(){
-var myayn = go1().innerHTML;
-var myout = goii();
-myout.innerHTML = myayn.replaceAll("ayt ", "if ");
-    
-  }
-</script>
+
 <pre></pre>
   </body>
 </html>
