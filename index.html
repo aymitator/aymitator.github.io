@@ -13,7 +13,11 @@ return d.getElementsByTagName("pre")[1];
   function translateii(){
 var myayn = go1().innerHTML;
 var myout = goii();
-myout.innerHTML = myayn.replaceAll("ayt ", "if ");
+var szout = myayn;
+szout = szout.replaceAll("ayt ", "if ");
+szout = szout.replaceAll("sub ", "def ");
+szout = szout.replaceAll("regular(", "open(");
+myout.innerHTML = szout;
     
   }
 </script>
@@ -23,6 +27,8 @@ myout.innerHTML = myayn.replaceAll("ayt ", "if ");
     <h1>sneklang iii: legendary snek🐍</h1>
     <h2>der Unlicense licensed</h2>
     <pre>
+sub writeln(_s):
+  print(_s)
 ayt "bean" in "canned beans":
   writeln("get it done")
 ayt "you" not in "eat eaters":
