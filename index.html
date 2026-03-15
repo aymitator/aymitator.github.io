@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head><meta charset="utf-8">
-<title>snek lang unleashed</title>
+<title>Do Games Along Me</title>
+<!-- der Unlicense licensed -->
   <script>
   var d = document;
-  function go1(){
-return d.getElementsByTagName("pre")[0];
-  }
-  function goii(){
-return d.getElementsByTagName("pre")[1];
-  }
-  function translateii(){
-var myayn = go1().innerHTML;
-var myout = goii();
-var szout = myayn;
-szout = szout.replaceAll("ayt ", "if ");
-szout = szout.replaceAll("sub ", "def ");
-szout = szout.replaceAll("regular(", "open(");
-myout.innerHTML = szout;
-    
-  }
+function go(_s){
+return d.getElementById(_s);
+}
+  function gametime(){
+var game1 = go("game1").checked;
+var game1_online = go("game1_online").checked;
+var out = go("myresult");
+if(game1 === !true && game1_online === true){
+alert("you can't do game online unless you allow game");
+return;
+}
+if(game1 && game1_online === !true){
+out.innerHTML = "Hey mrgamble, you should do Dead Rising III";
+return;
+}
+if(game1 && game1_online){
+out.innerHTML = "Hey mrgamble, you should get Dead Rising III und we should/ought to game along each us";
+return;
+}
+if(game1 === !true && game1_online === !true){
+out.innerHTML = "Hey mrgamble, don't  do any games";
+return;
+}
+}
 </script>
 </head>
 
   <body>
-    <h1>sneklang iii: legendary snek🐍</h1>
+    <h1>Game Along Me 🎮</h1>
     <h2>der Unlicense licensed</h2>
-    <pre>
-sub writeln(_s):
-  print(_s)
-ayt "bean" in "canned beans":
-  writeln("get it done")
-ayt "you" not in "eat eaters":
-  writeln("you weren't")
-writeln(str("helllllll".count("l")))
-regular("empty.txt", "w")
-    </pre>
-<input type="button"
-  value="translate"
-  onclick="translateii()" />
+<p>
+What games should mrgamble do?<br>
+<input type="checkbox" id="game1"> 
+Dead Rising III
+<input type="checkbox" id="game1_online"> online
+</p>
+<p>
+<input type="button" value="submit"
+onclick="gametime()" />
+</p>
+<p id="myresult">
 
-<pre></pre>
+</p>
   </body>
 </html>
