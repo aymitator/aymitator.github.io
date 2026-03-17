@@ -1,52 +1,61 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head><meta charset="utf-8">
-<title>Do Games Along Me</title>
+<title>Let's do Non-snek iiiii</title>
 <!-- der Unlicense licensed -->
   <script>
   var d = document;
 function go(_s){
 return d.getElementById(_s);
 }
-  function gametime(){
-var game1 = go("game1").checked;
-var game1_online = go("game1_online").checked;
-var out = go("myresult");
-if(game1 === !true && game1_online === true){
-alert("you can't do game online unless you allow game");
-return;
+function num_to_string(_num){
+if(_num < 2) return "" + _num;
+var mystr = "I";
+for(var i=0; i< _num - 1; i++) {
+mystr = mystr + i;
 }
-if(game1 && game1_online === !true){
-out.innerHTML = "Hey mrgamble, you should do Dead Rising III";
-return;
+return mystr;
 }
-if(game1 && game1_online){
-out.innerHTML = "Hey mrgamble, you should get Dead Rising III und we should/ought to game along each us";
-return;
+var sel = 0;
+function more_new(){
+sel += 1;
+if(sel > 2)return;
+go("src" + num_to_string(sel)).style.display = "block";
+go("src" + num_to_string(sel - 1)).style.display = "none";
 }
-if(game1 === !true && game1_online === !true){
-out.innerHTML = "Hey mrgamble, don't  do any games";
-return;
-}
-}
+
 </script>
 </head>
 
   <body>
-    <h1>Game Along Me 🎮</h1>
+    <h1>non-snek iiiii time</h1>
     <h2>der Unlicense licensed</h2>
-<p>
-What games should mrgamble do?<br>
-<input type="checkbox" id="game1"> 
-Dead Rising III
-<input type="checkbox" id="game1_online"> online
-</p>
-<p>
-<input type="button" value="submit"
-onclick="gametime()" />
-</p>
-<p id="myresult">
-
-</p>
+<input type="button" value="more new"
+onclick="more_new()" />
+<pre id="src0">
+#!/usr/bin/perl
+print "Hello, world\n";
+</pre>
+<pre id="src1"
+style="display:none">
+my %hash = (
+goneiii =&gt; [ "Corey", "Chris" ]
+);
+print $hash{"goneiii"}[0], 
+" is a goneiii name";
+</pre>
+<pre id="srcii"
+style="display:none">
+my @words = (
+"dangit",
+"redeem",
+"amazing"
+);
+print $words[0], " ", $words[1], " ", $words[2];
+</pre>
+<pre id="srciii"
+style="display:none">
+#done
+</pre>
   </body>
 </html>
