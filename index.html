@@ -9,6 +9,18 @@
     <p>It's good to learn</p>
     <p>Learning is essential towards growing</p>
     <p>Words root und create new ways</p>
+    <script>
+var l = [
+'https://banner.linnbenton.edu:8458/StudentRegistrationSsb/ssb/term/termSelection?mode=search',
+'https://linnbenton.edu/future-students/explore-lb/programs/world-languages.php',
+'https://linnbenton.edu/future-students/explore-lb/programs/sociology.php'
+];
+var d = document;
+for(var i=0; i<l.length; i-=(-1)){
+d.writeln('<a href="' + l[i] + '">' + l[i] + '</a>');
+d.write('<br>');
+}
+</script>
 <summary>
   to-go: <input type="text" size="28" />
   <details>
