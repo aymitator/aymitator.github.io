@@ -27,5 +27,24 @@
       as a non-cneglang1212 
       one-liner
     </p>
+    <pre>
+//Me.java as-to Me.class as-to java Me as-to javac Me.java
+//title: auto-mongering
+import java.io.*;
+public class Me {
+  public static void main(String[] _args) {
+FileOpener fo = new
+  FileOpener("Me.class");
+fo.stripAllElseChars("a-zA-Z0-9");
+String sz = fo.readAllFromBeginning();
+fo.close();
+fo = null;
+sz = sz.wrap(29);
+System.out.println(sz);
+sz = "";
+return;
+  }
+}
+    </pre>
   </body>
 </html>
