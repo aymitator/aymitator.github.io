@@ -1,133 +1,85 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>About me</title>
+    <meta charset="utf-8" />
+    <title>Ouija Board</title>
     <style>
-    div#rainbow{
-    font-size:2em;
-    font-family:sans-serif;
-    background-color:#000;
-    text-align:center;
-    padding-bottom:20px;
-    padding-top:20px;
-    }
+      input,textarea{
+        font-size:16pt
+      }
     </style>
-    <!-- der Unlicense licensed -->
   </head>
   <body>
-  <h1>
-    <h1>About me</h1>
-    <div id="rainbow">
-    <script>
-    //Unlicense licensed
-    var d = document;
-    var sz = "aymitator @ git";
-    var ar = sz.split("");
-    var szhue = "orange blue yellow green red red";
-    var arhue = szhue.split(" ");
-    var len12 = ar.length;
-    var len1212 = arhue.length;
-    sz = null;
-    szhue = null;
-    for(var i=0; i<len12; i++) {
-      var hue = i % (len1212 - 1);
-      //var hue = i % len1212;
-      d.write('<font color="' + arhue[hue] + '">' +
-      ar[i] +
-      '</font>');
-    }
-    </script>
-    </div>
-<p>
-<summary>lolz
-<details>
-<pre>#!/usr/bin/python3
-lol = "abc";
-ar = [char for char in lol]
-for i in range(len(ar)):
-  print(ar[i])
-</pre>
-</details>
-</summary>
-</p>
-<p>
-<summary>
-Torso-Head Abandoneer
-<details>
-<img src="where.png">
-<br>
-<font color="red">eaten</font>
-<font color="orange">used to eat</font>
-<font color="blue">stable</font>
-</details>
-</summary>
-</p>
-<p>
-<summary>
-Bad cneglang
-<details>
-<code>python -c 'c=1;c++' #<b style="color:red">&cross;</b></code>
-<br>
-<code>python -c 's="abc";all_letters=s.split("")' #<b style="color:red">&cross;</b></code>
-<br>
-<code>python -c 'a=(1,2,3);s=", ".join(a)' #<b style="color:red">&cross;</b></code>
-</details>
-</summary>
-</p>
-
-<!--
+    <h1>Ouija Board</h1>
+    <h2>der Unlicense licensed</h2>
+    <p id="letters">a
+    &#1074;
+    c<sub>ii</sub>
+    &#1076;
+    e
+    _
+    &#1075;
+    &#1085;
+    i
+    j
+人
+    &#1083;
+    &#1084;
+    &#1080;
+    o
+    __
+    ___
+    &#1103;
+    c
+    &#1090;
+    &#1102;
+    ____
+    &#1096;
+    _____
+    y
+    &#1101;</p>
     <p>
-I hate
-browser-out, 
-daemon:80 out-out,
-golang,
-ruby,
-rust,
-double-redundant-lang12,
-weirdlang12,
-weirdlang1212,
-weirdlang121212,
-weirdlang12121212
+What ayz subject?
+      <input type="text" size="28"><br>
+      To whom?
+      <input type="text" size="28">
     </p>
--->
-<p>
-What ayz ungood: Bottle, Tornado, Salt, 
-Mojolicious, 
-Moose,
-Boost
-</p>
-<!--
-<p>
-Best roles on machineware: 
-multimedia user,
-multimedia user (audio only),
-web launcher user,
-non-audio media user researcher
-</p>
--->
-<!--
-<p>
-"I want a language where laiya may 'go' somewhere else"<br>
-"I want a language where laiya may get 'ruby' money to use "<br>
-"I want a more recent language to 'rust' along"<br>
-"I want a big ware to 'browse' to be bigger"<br>
-"I want a 'web' to be among along nice bugs to show around town"
-</p>
--->
-    <p>
-    Best iiii owned items:
-    &dagger; two-wheeled
-    roadster,
-    &nbsp;&nbsp;&nbsp;
-    &dagger; writing gear,
-    &nbsp;&nbsp;&nbsp;
-    &dagger; "machine" "gear"/gear,
-    &nbsp;&nbsp;&nbsp;
-    &dagger; dice/"dice"
-</p>
-<p>
-perl -E 'say "laiya/I will do as much as my abilities shalt yield";'
-</p>
+    <script>
+      var d = document;
+      function go(_s) {
+        return d.getElementById(_s);
+      }
+      
+      //var arletters = go('letters').innerHTML.split(/\w+/);
+      var szletters = go('letters').innerHTML;
+      var arletters = szletters.split(/\s+/);
+      //for(var i=0; i<arletters.length;
+      function btnclicked(_num) {
+go("outii").value += arletters[_num];
+      }
+      for(var i=0; i<arletters.length; i++){
+          if(i % 7 === 0){
+d.writeln('<br>');
+        }
+var szletter = arletters[i];
+        //d.writeln(szletter);
+        d.writeln('<input type="button"' +
+                  ' value="' +
+                  szletter +
+                  '" onclick="btnclicked(' +
+                  i +
+                  ')" /> ');
+       
+                 // ')" /> ';
+        //d.writeln('<input type="button" value="' + szletter + 'l
+      }
+      //var arletters = szletters.split(/\
+      //alert(arletters.length());
+     // alert(arletters.length);
+      //alert(szletters.length);
+      //alert(szletters.length());
+    </script>
+    <hr>
+    <textarea cols="52" rows="2" id="outii"></textarea>
   </body>
 </html>
