@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- Unlicense licensed out/non-directory/content/ideas -->
+<title>to learn what</title>
+<style>
+#learnz{display:none}
+pre.built-aynz { display:none }
+pre.arrayz {display:none }
+pre.ctringz {display:none}
+pre.hashez {display:none}
+pre.regularz {display:none}
+pre.remote {display:none}
+pre.sortinz {display:none}
+pre.timez {display:none}
+pre.modules {display:none}
+pre.built-ayn-cly{display:none}
+pre.cubz {display:none}
+pre.charz {display:none}
+pre.aynout {display:none}
+pre.one-lineerz {display:none}
+pre.globz {display:none}
+pre.trz {display:none}
+</style>
+</head>
+<body>
+<div id="nonbelow">
+<h1>to learn what?</h1>
+<h2>der Unlicense licensed</h2>
+<pre id="learnz">arrayz
+ctringz
+built-aynz
+hashez
+regularz
+remote
+sortinz
+timez
+modules
+built-ayn-cly
+cubz
+charz
+aynout
+globz
+trz
+one-lineerz</pre>
+<script>
+var d = document;
+function go(_s) {
+return d.getElementById(_s);
+}
+var ayn = go("learnz").innerHTML;
+var aynii = ayn.split("\n");
+ayn = null;
+for(var i=0; i<aynii.length; i++) {
+d.writeln("<input id=\"chk" + aynii[i] + "\" type=\"checkbox\"> " + aynii[i] + "<br>");
+}
+aynii = null;
+</script>
+</div>
+<script>
+function btnshow_clicked(_mee){
+_mee.style.display = "none";
+var ar = [
+"arrayz",
+"ctringz",
+"built-aynz",
+"hashez",
+"regularz",
+"remote",
+"sortinz",
+"timez",
+"modules",
+"built-ayn-cly",
+"cubz",
+"charz",
+"aynout",
+"globz",
+"trz",
+"one-lineerz"
+];
+for(var ii=0; ii<ar.length; ii++) {
+var a = d.getElementsByClassName(ar[ii]);
+var sel = d.getElementById("chk" + ar[ii]).checked;
+if(!sel) { continue; }
+for(var i=0; i<a.length; i++)
+  a[i].style.display = "block";
+}
+d.getElementById("nonbelow").style.display = "none";
+}
+</script>
+<input type="button" value="show" onclick="btnshow_clicked(this)">
+<pre class="built-aynz remote">
+my $main_returned = system("echo returns 0");
+</pre>
+<pre class="remote">
+my $standard_out = `echo i am standard out`;
+</pre>
+<pre class="arrayz">
+my @home = qw/roadster machinei machineii tablet dice/;
+my ($ride, $enjoyment, $enjoymentii, undef, $tool) = @home;
+($enjoyment, $enjoymentii) = ($enjoymentii, $enjoyment);
+</pre>
+<pre class="hashez">
+my %h = qw/r red b blue bl shade o orange/;
+</pre>
+<pre class="hashez">
+sub count_len_hash(%hash) {
+return scalar(keys(%hash));
+}
+</pre>
+<pre class="ctringz built-aynz">
+sub strlen($myctring) {
+return length($myctring);
+}
+</pre>
+<pre class="globz">
+my @homedir = <~/*>;
+</pre>
+<pre class="aynout globz">
+say "ayz a dayrectory" if -d <~/>;
+</pre>
+<pre class="aynout globz">
+say "ctrangely new" if -M <~/> < 1;
+</pre>
+<pre class="regularz">
+my $regular_charz = '$ ^ * ( ) + [ { \\ | . ?';
+my @needs_slashes =
+split " ", $regular_charz;
+</pre>
+<pre class="trz">
+my $sz = "Hello World";
+$sz =~ tr/A-Z/a-z/;
+</pre>
+<pre class="ctringz">
+no feature "unicode_strings";
+</pre>
+<pre class="ctringz regularz">
+use re "/aa";
+my $sz = "world";
+if($sz =~ /^\w+$/) {
+  say "matches";
+}
+</pre>
+<pre class="one-lineerz">
+cat blog-material | perl -00 -nle 'say;exit(0);'
+</pre>
+<pre class="ctringz regularz">
+my $sz = "bad birds win";
+while($sz =~ /\b\w/g) {
+  say "new word at: " . (pos($sz) - 1);
+}
+</pre>
+<pre class="charz trz ctringz">
+my $sz = "aabbcceeggrrsstt";
+my $char_count_number = ($sz =~ tr/ab//);
+</pre>
+<pre class="cubz">
+#sub m{} sub q{} sub y{} 
+</pre>
+<pre class="ctringz">
+my $sz =&lt;&lt;EOT;
+multi-lined
+ctring
+good bye
+EOT
+</pre>
+<pre class="arrayz">
+my @a = (1,2,22,222,20);
+my @b = @a;
+</pre>
+<pre class="cubz built-aynz arrayz">
+sub retarray {
+exit 1 unless defined wantarray;
+my $arg1 = shift @_;
+my @ret = (1,2,@_);
+if($arg1) { 
+  push(@ret, length("iiiiii"));
+}
+return @ret;
+}
+my ($a, $b, undef, @c) = retarray();
+</pre>
+<pre class="ctringz built-aynz charz one-lineerz">
+perl -E 'my $abcd="abcd";my $d=substr($abcd,index($abcd,"d"),1);say $d;'
+</pre>
+<pre class="one-lineerz built-ayn-cly">
+perl -E 'my $abc="abc123";my @abc=split //, $abc;@abc = grep { /^[a-z]$/ } @abc;say "@abc";'
+</pre>
+<pre class="one-lineerz built-ayn-cly">
+perl -E 'my @abc = qw/a b c/;@abc = map { $_ x length("iii") } @abc;say "@abc";'
+</pre>
+<pre class="charz built-aynz cubz">
+sub charat { my $sz = shift @_; my $ayn = shift @_; return substr($sz, $ayn, 1); }
+say charat("abcd", 3);
+</pre>
+<pre class="aynout built-aynz">
+open(my ${han}, "&gt;", "testii") or exit 1;
+say ${han} "#!/bin/bash";
+say ${han} q/exit $(( 1 + 1 ))/;
+</pre>
+<pre class="modules">
+use Archive::Tar;
+my $tar = Archive::Tar->new;
+$tar->add_data("README", "README contents");
+$tar->write("mein.tar");
+</pre>
+<pre class="modules">
+use Cwd "realpath";
+my $cwd = getcwd();
+say "$cwd is meinen cwd";
+$cwd = realpath();
+say "$cwd is meinen real cwd";
+</pre>
+<pre class="modules ctringz">
+use File::Basename;
+my $sz = "/home/user/Downloads/awesome/";
+say "basename ayz " . basename($sz);
+say "dirname ayz " . dirname($sz);
+$sz = "/home/user/Downloads/awesome";
+say "basename ayz " . basename($sz);
+say "dirname ayz " . dirname($sz);
+</pre>
+<pre class="modules remote">
+file::compare: diff
+file::copy: cp
+file::find: find
+file::path: mkdir
+file::temp: mktemp
+file::stat: stat
+http::tiny: busybox wget
+list::util: shuf
+</pre>
+<pre class="sortinz arrayz">
+my @sz = qw/a b c b a/;
+my @sorted = sort { $a cmp $b } @sz;
+</pre>
+<pre class="timez modules">
+use POSIX "strftime";
+my $hour = strftime "%H", gmtime;
+my $day = strftime "%d", gmtime;
+</pre>
+</body>
+</html>
