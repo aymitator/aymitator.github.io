@@ -18,7 +18,14 @@
         return d.getElementById(_o);
       }
       function body_hit(_e) {
-        alert(_e.keyCode);
+        var num = _e.keyCode;
+        var neww = "";
+        if(num === 76)
+          neww = "https://aymitator.github.io/to-learn/to-learn.html";
+        if(num === 79)
+          neww = "https://aymitator.github.io/ouija-board/ouija-board.html";
+        if(neww !== "")
+          window.location.href = neww;
       }
     </script>
   </head>
