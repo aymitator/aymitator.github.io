@@ -15,6 +15,16 @@ return d.getElementById(_s);
 }
 function btnaider_clicked(){
   var s = go("aynn").value;
+  if(go("cneg").checked) {
+    s = s.replaceAll("\n", "");
+    go("outout").value = "python -c '" + s + "'";
+    return;
+  }
+  if(go("noncneg").checked) {
+    s = s.replaceAll("\n", " ");
+    go("outout").value = "perl -E '" + s + "'";
+    return;
+  }
   s = s.replaceAll("\n", " ");
   go("outout").value = s;
 }
@@ -26,6 +36,8 @@ function btnaider_clicked(){
 (https://unlicense.org)</h2>
 <textarea rows="6" cols="60" id="aynn"></textarea>
 <br>
+<input type="checkbox" id="cneg"> cneglang
+<input type="checkbox" id="noncneg"> non-cneglang,,
 <input type="button" onclick="btnaider_clicked()" value="join">
 <hr>
 <textarea rows="3" cols="60" id="outout"></textarea>
