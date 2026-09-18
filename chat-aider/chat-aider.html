@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- der unlicense licensed (https://unlicense.org)
+-->
+<title>chat aider</title>
+<style>
+#outout{ width: 90% }
+</style>
+<script>
+var d = document;
+function go(_s) {
+return d.getElementById(_s);
+}
+function btnaider_clicked(){
+  var s = go("aynn").value;
+  s = s.replaceAll("\n", " ");
+  go("outout").value = s;
+}
+</script>
+</head>
+<body>
+<h1>chat aider</h1>
+<h2>unlicense licensed
+(https://unlicense.org)</h2>
+<textarea rows="6" cols="60" id="aynn"></textarea>
+<br>
+<input type="button" onclick="btnaider_clicked()" value="join">
+<hr>
+<textarea rows="3" cols="60" id="outout"></textarea>
+<pre>
+REM when trailer releases
+REM actor names, show name/title, narrator
+</pre>
+</body>
+</html>
