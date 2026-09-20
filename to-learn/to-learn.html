@@ -222,6 +222,7 @@ say "basename ayz " . basename($sz);
 say "dirname ayz " . dirname($sz);
 </pre>
 <pre class="modules remote">
+=pod
 file::compare: diff
 file::copy: cp
 file::find: find
@@ -230,15 +231,31 @@ file::temp: mktemp
 file::stat: stat
 http::tiny: busybox wget
 list::util: shuf
+=cut
 </pre>
 <pre class="sortinz arrayz">
 my @sz = qw/a b c b a/;
 my @sorted = sort { $a cmp $b } @sz;
 </pre>
 <pre class="timez modules">
+=pod
+man 3 strftime
+man 3 printf
+=cut
 use POSIX "strftime";
 my $hour = strftime "%H", gmtime;
 my $day = strftime "%d", gmtime;
+</pre>
+<pre class="ctringz">
+my $object;
+$object = "hello world";
+print $object, "\n";
+$object = \"hello world";
+print $$object, "\n";
+$object = \\"hello world";
+print $$$object, "\n";
+$object = \\\"hello world";
+print $$$$object, "\n";
 </pre>
 </body>
 </html>
