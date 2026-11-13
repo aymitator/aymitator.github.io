@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ouija Board</title>
+    <style>
+      input,textarea{
+        font-size:16pt
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ouija Board</h1>
+    <h2>der Unlicense licensed</h2>
+    <p id="letters">a
+    &#1074;
+    c<sub>ii</sub>
+    &#1076;
+    e
+    _
+    &#1075;
+    &#1085;
+    i
+    j
+&#20154;
+    &#1083;
+    &#1084;
+    &#1080;
+    o
+    __
+    ___
+    &#1103;
+    c
+    &#1090;
+    &#1102;
+    ____
+    &#1096;
+    _____
+    y
+    &#1101;</p>
+    <p>
+What ayz subject?
+      <input type="text" size="28"><br>
+      To whom?
+      <input type="text" size="28">
+    </p>
+    <script>
+      var d = document;
+      function go(_s) {
+        return d.getElementById(_s);
+      }
+      
+      //var arletters = go('letters').innerHTML.split(/\w+/);
+      var szletters = go('letters').innerHTML;
+      var arletters = szletters.split(/\s+/);
+      //for(var i=0; i<arletters.length;
+      function btnclicked(_num) {
+go("outii").value += arletters[_num];
+      }
+      for(var i=0; i<arletters.length; i++){
+          if(i % 7 === 0){
+d.writeln('<br>');
+        }
+var szletter = arletters[i];
+        //d.writeln(szletter);
+        d.writeln('<input type="button"' +
+                  ' value="' +
+                  szletter +
+                  '" onclick="btnclicked(' +
+                  i +
+                  ')" /> ');
+       
+                 // ')" /> ';
+        //d.writeln('<input type="button" value="' + szletter + 'l
+      }
+      //var arletters = szletters.split(/\
+      //alert(arletters.length());
+     // alert(arletters.length);
+      //alert(szletters.length);
+      //alert(szletters.length());
+    </script>
+    <hr>
+    <textarea cols="52" rows="2" id="outii"></textarea>
+  </body>
+</html>
